@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="cross_slide">
+  <link name="cross_slide">
+    <visual>
+      <geometry>
+        <mesh filename="package://farmbot_description/meshes/visual/cross_slide.dae" />
+      </geometry>
+    </visual>
+  </link>
+</robot>

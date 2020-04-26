@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="fixes_joints" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="raised_bed_height" value="0.29"/>
+  <xacro:property name="raised_bed_width" value="1.49" />
+  <joint name="joint_raisedBed_tracks" type="fixed">
+    <parent link="raised_bed"/>
+    <child link="tracks"/>
+    <origin rpy="0 0 ${pi/2}" xyz="${raised_bed_width/2} 0 ${raised_bed_height}"/>
+  </joint>
+  <!--
+  <joint name="joint_gantry_cross_slide" type="fixed">
+    <parent link="gantry"/>
+    <child link="cross_slide"/>
+  </joint>
+    <joint name="joint_tracks_gantry" type="fixed">
+    <parent link="tracks"/>
+    <child link="gantry"/>
+  </joint>
+    <joint name="joint_raised_bed_tracks" type="fixed">
+    <parent link="raised_bed"/>
+    <child link="tracks"/>
+  </joint>
+-->
+</robot>

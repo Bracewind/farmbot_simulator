@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="raised_bed">
+  <link name="raised_bed">
+    <visual>
+      <geometry>
+        <mesh filename="package://farmbot_description/meshes/visual/raised_bed.dae" />
+      </geometry>
+    </visual>
+  </link>
+</robot>

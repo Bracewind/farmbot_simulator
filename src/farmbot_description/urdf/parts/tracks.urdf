@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="tracks">
+  <link name="tracks">
+    <visual>
+      <geometry>
+        <mesh filename="package://farmbot_description/meshes/visual/tracks.dae" />
+      </geometry>
+    </visual>
+  </link>
+</robot>

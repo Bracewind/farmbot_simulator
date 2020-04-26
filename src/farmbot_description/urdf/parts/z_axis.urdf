@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="z_axis">
+  <link name="z_axis">
+    <visual>
+      <geometry>
+        <mesh filename="package://farmbot_description/meshes/visual/z_axis.dae" />
+      </geometry>
+    </visual>
+  </link>
+</robot>

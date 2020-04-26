@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<robot name="fixes_joints" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="gantry_height" value="0.78"/>
+  <xacro:property name="between_tracks_distance" value="1.49" />
+  <joint name="joint_tracks_gantry" type="prismatic">
+    <parent link="tracks"/>
+    <child link="gantry"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    <origin rpy="0 0 ${pi/2}" xyz="0 ${between_tracks_distance/2} ${gantry_height}"/>
+  </joint>
+  <!--
+  <joint name="joint_gantry_cross_slide" type="fixed">
+    <parent link="gantry"/>
+    <child link="cross_slide"/>
+  </joint>
+    <joint name="joint_tracks_gantry" type="fixed">
+    <parent link="tracks"/>
+    <child link="gantry"/>
+  </joint>
+    <joint name="joint_raised_bed_tracks" type="fixed">
+    <parent link="raised_bed"/>
+    <child link="tracks"/>
+  </joint>
+-->
+</robot>

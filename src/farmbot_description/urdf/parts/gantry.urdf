@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="gantry">
+  <link name="gantry">
+    <visual>
+      <geometry>
+        <mesh filename="package://farmbot_description/meshes/visual/gantry.dae" />
+      </geometry>
+    </visual>
+  </link>
+</robot>
