@@ -17,6 +17,17 @@
         <mesh filename="package://farmbot_description/meshes/visual/cross_slide.dae"/>
       </geometry>
     </visual>
+    <collision>
+      <visual>
+        <geometry>
+          <mesh filename="package://farmbot_description/meshes/visual/cross_slide.dae"/>
+        </geometry>
+      </visual>
+    </collision>
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+    </inertial>
   </link>
   <joint name="joint_gantry_crossSlide" type="prismatic">
     <parent link="gantry"/>
@@ -25,20 +36,6 @@
     <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
-  <!--
-  <joint name="joint_gantry_cross_slide" type="fixed">
-    <parent link="gantry"/>
-    <child link="cross_slide"/>
-  </joint>
-    <joint name="joint_tracks_gantry" type="fixed">
-    <parent link="tracks"/>
-    <child link="gantry"/>
-  </joint>
-    <joint name="joint_raised_bed_tracks" type="fixed">
-    <parent link="raised_bed"/>
-    <child link="tracks"/>
-  </joint>
--->
   <link name="base_link"/>
   <joint name="base_joint" type="fixed">
     <parent link="base_link"/>

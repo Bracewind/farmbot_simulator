@@ -6,5 +6,14 @@
         <mesh filename="package://farmbot_description/meshes/visual/gantry.dae" />
       </geometry>
     </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://farmbot_description/meshes/collision/collision_gantry.stl" /> 
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+    </inertial>
   </link>
 </robot>

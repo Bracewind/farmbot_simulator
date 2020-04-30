@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_model" args="-file $(find farmbot_description)/urdf/parts/gantry.urdf -urdf -x 0 -y 0 -z 1 -model gantry" >
+  </node> 
+</launch>

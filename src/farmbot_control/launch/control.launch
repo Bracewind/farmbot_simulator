@@ -1,44 +1,7 @@
 <launch>
-   <!-- Load the urdf into the parameter server. -->
-
-
-
-  <arg name="path_urdf" default="$(find farmbot_description)/urdf/assembly.urdf"/>
-
-  <param name="my_robot_description" textfile="$(arg path_urdf)"/>
-  <arg name="rvizconfig" default="$(find farmbot_description)/rviz/urdf.rviz" />
-
-    <rosparam command="load" file="$(find farmbot_control)/config/topics.yaml" />
-
-  <node pkg="robot_state_publisher" type="robot_state_publisher" name="rob_st_pub" >
-    <remap from="robot_description" to="my_robot_description" />
-    <remap from="joint_states" to="/farmbot/joint_states" />
-  </node>
-
-  <!--
-  <include file="$(find urdf_tutorial)/launch/display.launch">
-    <arg name="model" value="$(find farmbot_description)/urdf/assembly.urdf" />
-  </include>
   
-  <node pkg="joint_state_publisher" type="joint_state_publisher" name="state_publisher" >
-    <remap from="joint_states" to="/farmbot/joint_states" />
-    <param name="robot_description" type="string" value="$(arg path_urdf)"/>
-  </node>
--->
-
-  <node pkg="tf" type="static_transform_publisher" name="ref_frame" args="0 0 0 0 0 0 1 base_link cross_slide 100" >
-
-  </node>
-
-
-  <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="gui" >
-    <remap from="robot_description" to="my_robot_description" />
-  </node>
-
   <node pkg="farmbot_control" type="state_publisher" name="farmbot_state_publisher">
+
   </node>
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true">
-        <remap from="robot_description" to="my_robot_description" />
-  </node>
 </launch>
